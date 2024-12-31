@@ -1,14 +1,27 @@
 [tool.poetry]
 name = "sci-cache"
 version = "0.1.1"
-description = ""
+description = "A Python library for caching scientific data on disk, streamlining research workflows by storing intermediate results."
 authors = ["panhaoyu <panhaoyu.china@outlook.com>"]
+license = "MIT"
+keywords = ["cache", "scientific", "data", "performance", "optimization"]
+homepage = "https://github.com/panhaoyu/sci-cache"
+repository = "https://github.com/panhaoyu/sci-cache"
+documentation = "https://github.com/panhaoyu/sci-cache"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 pypinyin = "^0.53.0"
-
 
 [tool.poetry.group.dev.dependencies]
 open3d = "^0.18.0"
