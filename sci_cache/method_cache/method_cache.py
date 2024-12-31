@@ -77,7 +77,7 @@ def sci_method_cache(func: Callable) -> Callable:
         Callable: The wrapped method with caching functionality.
     """
     if not isinstance(func, (types.FunctionType,)):
-        raise TypeError(f"@method_cache can only be applied to functions, got {type(func)}")
+        raise TypeError(f"@sci_method_cache can only be applied to functions, got {type(func)}")
 
     key = func.__name__
 
