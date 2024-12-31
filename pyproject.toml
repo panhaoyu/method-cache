@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sci-cache"
-version = "0.1.1"
+version = "0.1.2"
 description = "A Python library for caching scientific data on disk, streamlining research workflows by storing intermediate results."
 authors = ["panhaoyu <panhaoyu.china@outlook.com>"]
 license = "MIT"
