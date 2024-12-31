@@ -1,7 +1,7 @@
 import tempfile
 from pathlib import Path
 
-from sci_cache import method_cache, MethodDiskCache
+from sci_cache import sci_method_cache, MethodDiskCache
 
 
 class ScientificCache(MethodDiskCache):
@@ -14,12 +14,12 @@ class ScientificCache(MethodDiskCache):
             ScientificCache._temp_dir = tempfile.TemporaryDirectory()
         return Path(ScientificCache._temp_dir.name)
 
-    @method_cache
+    @sci_method_cache
     def compute_square(self) -> int:
         ScientificCache.compute_square_count += 1
         return 3 * 3
 
-    @method_cache
+    @sci_method_cache
     def compute_cube(self) -> int:
         ScientificCache.compute_cube_count += 1
         return 2 * 2 * 2

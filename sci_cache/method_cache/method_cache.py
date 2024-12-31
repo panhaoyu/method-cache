@@ -62,11 +62,13 @@ class MethodDiskCache(MethodCache, ABC):
         return self._initialize_cache()
 
 
-def method_cache(func: Callable) -> Callable:
+def sci_method_cache(func: Callable) -> Callable:
     """
     Decorator to cache the results of class methods.
 
     Only supports methods without parameters and requires the method's class to be a subclass of MethodCache.
+
+    The prefix `sci_` is used to avoid the identifier duplicated with the `importlib.metadata.method_cache`.
 
     Args:
         func (Callable): The method to decorate.

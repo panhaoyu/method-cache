@@ -5,7 +5,7 @@ A Python library for caching scientific data on disk, streamlining research work
 ## Features
 
 - **Method-Based Caching**: Automatically cache each method's result based on the method name to the specified directory.
-- **Easy Integration**: Inherit from `MethodDiskCache` and use the `@method_cache` decorator to enable caching.
+- **Easy Integration**: Inherit from `MethodDiskCache` and use the `@sci_method_cache` decorator to enable caching.
 - **Flexible Storage**: Store cached data in a designated folder, organized and managed automatically.
 - **Supports Various Data Types**: Ideal for scientific data processing tasks, handling complex data types efficiently.
 
@@ -20,7 +20,7 @@ pip install sci-cache
 ```python
 from pathlib import Path
 
-from sci_cache import MethodDiskCache, method_cache
+from sci_cache import MethodDiskCache, sci_method_cache
 
 
 # Define a caching class by inheriting from MethodDiskCache
@@ -32,13 +32,13 @@ class ScientificCache(MethodDiskCache):
         # Set the cache directory to 'cache' folder in the current script's directory
         return Path(__file__).parent / "cache"
 
-    @method_cache
+    @sci_method_cache
     def compute_square(self) -> int:
         # Increment the count to track actual computation
         ScientificCache.compute_square_count += 1
         return 3 * 3  # Example computation
 
-    @method_cache
+    @sci_method_cache
     def compute_cube(self) -> int:
         # Increment the count to track actual computation
         ScientificCache.compute_cube_count += 1
